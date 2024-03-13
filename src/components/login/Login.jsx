@@ -6,7 +6,6 @@ import React, { useState, useContext } from "react";
 export const Login = () => {
   const { userState, userActions } = useContext(UserContext);
   const [show, setShow] = useState(false);
-  console.log(show);
   return (
     <div className="register">
       <div className="register-all">
@@ -49,7 +48,7 @@ export const Login = () => {
             <a href="/forgetpass">Forgot Password?</a>
           </div>
 
-          <button type={"submit"}>Login</button>
+          <button type={"submit"} className="loginbtn">Login</button>
           {/* <a href="">Back</a> */}
         </form>
         <div className="signin">

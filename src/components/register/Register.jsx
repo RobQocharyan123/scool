@@ -21,7 +21,7 @@ const [show, setShow] = useState(false);
               type="text"
               placeholder="Enter youre name"
               onChange={(e) => userActions.setName(e.target.value)}
-              value={userState.name}
+              value={userState.username}
               className={userState.errorName?'error':''}
 
             />

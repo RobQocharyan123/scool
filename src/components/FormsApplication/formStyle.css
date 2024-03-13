@@ -1,164 +1,162 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 .formContainer {
-    background-color: #F3F9EC;
-    padding-bottom: 60px;
+  background-color: #f3f9ec;
+  padding-bottom: 60px;
+  width: 100%;
 }
 
-.formContainer form{
-    width: 100%;
+.formContainer form {
+  width: 100%;
 }
 
-.formContainer form input{
-    width: auto;
+.formContainer form input {
+  width: auto;
 }
 
-.formContainerImage img{
+.formContainerImage img {
   width: 100%;
   height: 100%;
 }
 
 .formBlock {
-    width: 50%;
-    margin: auto;
-    font-family: "Roboto", sans-serif;
+  width: 50%;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
 }
-.formBlock label{
-    padding: 0;
-    color: #000;
+.formBlock label {
+  padding: 0;
+  color: #000;
 }
 
-.formBlock input{
-    border-radius: 0;
-    padding-left: 0;
-    height: auto;
+.formBlock input {
+  border-radius: 0;
+  padding-left: 0;
+  height: auto;
 }
 
 .formTitle {
-    padding-top: 20px;
-    text-align: center;
-    padding-bottom: 45px;
-    font-size: 55px;
-    font-weight: 400;
-    line-height: 69px;
-    letter-spacing: 0.1px;
+  padding-top: 20px;
+  text-align: center;
+  padding-bottom: 45px;
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 69px;
+  letter-spacing: 0.1px;
 }
 
 .formItem {
-    background-color: white;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 2px 4px 4px 0px #405A1C33;
+  background-color: white;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 4px 4px 0px #405a1c33;
+  width: 100%;
 }
 
 .m-top {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 .m-bottom {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .borderRed {
-    border-bottom: 2px solid red !important;
+  border-bottom: 2px solid red !important;
 }
 
 .formItem .formItemLabel1 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
 }
 
 .formItem input[type="checkbox"]::before {
-    content: "";
-   
+  content: "";
 }
 
-
-.formItem  .formItemInput1 {
-    border: none;
-    width: 75%;
-    outline: none;
-    font-family: "Roboto", sans-serif;
-    padding-bottom: 7px;
-    font-size: 16px;
-    line-height: 28px;
-    letter-spacing: 0.33px    ;
-    border-bottom: 2px solid #D9D9D9;
-    appearance: none;
-    --moz-appearance: textfield;
-    --webkit-appearance: none;
-    margin:0;
-    margin-top: 20px;
+.formItem .formItemInput1 {
+  border: none;
+  width: 100%;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  padding-bottom: 7px;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.33px;
+  border-bottom: 2px solid #d9d9d9;
+  appearance: none;
+  --moz-appearance: textfield;
+  --webkit-appearance: none;
+  margin: 0;
+  margin-top: 20px;
 }
-
 
 .formItem .formScoolBlock {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
 }
 
 .formScoolBlock div label {
-    font-size: 17px;
-    line-height: 20px;
-    font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 400;
 }
 
 .formScoolBlock div {
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
 }
 
 .formScoolBlock div input {
-    width: 15px;
-    height: 15px;
-    border-radius: 4.91px;
+  width: 15px;
+  height: 15px;
+  border-radius: 4.91px;
 }
 
 .select-wrapper {
-    position: relative;
-    width: 50%;
+  position: relative;
+  width: 50%;
 }
-  
+
 .select-wrapper select {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #cccccc;
-    background-color: 
-#D9D9D9;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  background-color: #d9d9d9;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
-  
+
 .select-wrapper::after {
-    content: "\25BC";
-    position: absolute;
-    top: calc(44% - 6px);
-    appearance: none;
-    right: 10px;
-    font-size: 15px;
-    color: #666666;
-    pointer-events: none;
+  content: "\25BC";
+  position: absolute;
+  top: calc(44% - 6px);
+  appearance: none;
+  right: 10px;
+  font-size: 15px;
+  color: #666666;
+  pointer-events: none;
 }
-  
+
 .select-wrapper select:focus {
-    outline: none;
-    appearance: none;
-    border-color: black; 
+  outline: none;
+  appearance: none;
+  border-color: black;
 }
-  
+
 .select-wrapper:hover select {
-    border-color: black; 
-    appearance: none;
-} 
-  
+  border-color: black;
+  appearance: none;
+}
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -172,200 +170,122 @@ input[type="number"] {
 }
 
 .programSpan {
-    color: #6F6C6C;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 20px;
-    padding-bottom: 8px;
+  color: #6f6c6c;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  padding-bottom: 8px;
 }
 
 .time-block {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .time-block-container h2 {
-    font-size: 25px;
-    font-weight: 700;
-    font-family: "Roboto", sans-serif;
-    border-bottom: 4px solid #FFB300;
-    padding-left: 25px;
-    padding-right: 25px;
-    text-align: center;
-    padding-bottom: 10px;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  border-bottom: 4px solid #ffb300;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 .time-block-container {
-    padding-top: 20px;
-    padding-bottom: 35px;
+  padding-top: 20px;
+  padding-bottom: 35px;
 }
 
 .time-block-container-content {
-    display: flex;
-    column-gap: 8px;
-    margin-top: 15px;
+  display: flex;
+  column-gap: 8px;
+  margin-top: 15px;
 }
 
 .time-block-container-content div {
-    background-color: #7AB73A;
-    width: 25%;
-    padding: 25px 25px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    column-gap: 5px;
+  background-color: #7ab73a;
+  width: 25%;
+  padding: 25px 25px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  column-gap: 5px;
 }
 
-
-.time-block-container-content div p:nth-child(1){
-    font-size: 30px;
-    color: white;
-    line-height: 35px;
-    font-weight: 700;
-    font-family: "Roboto", sans-serif;  
+.time-block-container-content div p:nth-child(1) {
+  font-size: 30px;
+  color: white;
+  line-height: 35px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
 }
 
-.time-block-container-content div p:nth-child(2){
-    color: white;
-    font-family: "Roboto", sans-serif;  
-    font-size: 12px;
-    font-weight: 200;
-    line-height: 14px;
+.time-block-container-content div p:nth-child(2) {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 14px;
 }
 
 .formBtnBlock {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .btn-form {
-    padding: 15px 70px !important;
-    cursor: pointer;
-    border: none;
-    transition: all 1s;
-    background: #7AB73A;
-    color: white;
-    font-size: 18px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    line-height: 28px;
+  padding: 15px 70px !important;
+  cursor: pointer;
+  border: none;
+  transition: all 1s;
+  background: #7ab73a;
+  color: white;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  line-height: 28px;
 }
 
 .bnt-clear-form {
-    background-color: transparent;
-    border: none;
-    font-family: "Roboto", sans-serif;
-    color: #000000;
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 18px;
-    line-height: 20px;
+  background-color: transparent;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 .btn-form:hover {
-    background-color: #3d7303;
+  background-color: #3d7303;
 }
 
 .errorMessge {
   color: red;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
-  font-weight:600;
+  font-weight: 600;
   text-transform: uppercase;
   padding: 5px 0;
 }
 
-@media screen and (max-width: 1280px) and (min-width: 1024px) {
-    .formBlock {
-        width: 65%;
-    }
 
-    .formTitle {
-        font-size: 45px;
-    }
-
-    .time-block-container-content div p:nth-child(1) {
-        font-size: 25px;
-    } 
-
-    .time-block-container-content div {
-        background-color: #7AB73A;
-        width: 25%;
-        padding: 20px 25px
-    }
+/* errors */
+.error {
+  border-bottom: 1px solid red !important;
 }
 
-  @media screen and (max-width: 1023px) and (min-width: 768px) {
-    .formBlock {
-        width: 73%;
-    }
-
-
-
-    .formTitle {
-        font-size: 40px;
-    }
-  }
-
-  @media screen and (max-width: 767px) and (min-width: 290px) {
-    .formBlock {
-        width: 94%;
-    }
-
-    .time-block-container-content div p:nth-child(1) {
-        font-size: 20px;
-        line-height: 25px;
-    }
-
-    .formTitle {
-        font-size: 30px;
-    }
-
-    .time-block-container-content div p:nth-child(2) {
-        color: white;
-        font-family: "Roboto", sans-serif;
-        font-size: 10px;
-    }
-
-    .time-block-container-content div {
-        background-color: #7AB73A;
-        width: 23%;
-        padding: 12px 16px;
-        box-sizing: border-box;
-    }
-
-    .time-block-container {
-        padding-top: 35px;
-        padding-bottom: 10px;
-    }
-
-    .select-wrapper {
-        width: 75%;
-    }
-
-    .formItem .formItemLabel1 {
-        font-size: 16px;
-    }
-
-    .formScoolBlock div label {
-        font-size: 14px;
-    }
-
-    .formBtnBlock {
-        flex-direction: column;
-        row-gap: 15px;
-    }
-
-    .btn-form {
-        width: 100% !important;
-    }
-
-    .time-block-container h2 {
-        font-size: 13px;
-    }
-  }
+/* scedule */
+/* .scedule {
+  height: 500px;
+  width: 100%;
+  margin-top: 100px;
+} */

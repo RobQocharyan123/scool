@@ -6,12 +6,12 @@ import { UserContext } from '../../UserContext';
 
 export const ForgetPass = () => {
   const { userState, userActions } = useContext(UserContext);
+  // Resubmit bazhiny arac chi
 
   return (
     <div className="register">
     <div className="register-all">
       <h1>Forget Password?</h1>
-      <p>Enter your registered email below</p>
       <form onSubmit={userActions.handleSubmitForgetPass}>
         <div className="email">
           <label>Email</label>
@@ -33,7 +33,7 @@ export const ForgetPass = () => {
       </form>
       <div className="signin">
         <p>
-        Can’t get email ? <a href="#" onClick={userActions.handleSubmitForgetPass}>Resubmit</a>{" "}
+        Can’t get email ? <a href="#">Resubmit</a>{" "}
         </p>
       </div>
     </div>

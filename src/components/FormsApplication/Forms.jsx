@@ -258,6 +258,11 @@ export default function Forms() {
   };
 
   const handleClassChange = (e) => {
+
+    if((e.target.value)==="We have 2 teams of both age groups (5-6 and 7-8 grades)."){
+        //  tommorow
+    }
+    let variable = true
     const selectedClass = e.target.value;
     let updatedDisableState = {};
     let updatedCheckedState = {
@@ -288,6 +293,7 @@ export default function Forms() {
       infoForm.programs1 = "";
       infoForm.programs2 = "";
     } else {
+        variable = true
       updatedDisableState = {
         programs1Disable: false,
         programs2Disable: false,
@@ -554,9 +560,6 @@ export default function Forms() {
           </div>
         </form>
       </div>
-      {/* <Link to={`/test/Form1`}>
-               Hello
-            </Link> */}
     </div>
   );
 }

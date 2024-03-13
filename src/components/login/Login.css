@@ -13,7 +13,8 @@
   width: 50%;
 }
 
-.rememberMe label{
+.loginbtn{
+  margin-top: 20px;
 }
 .rememberMe input{
     width: 10%;

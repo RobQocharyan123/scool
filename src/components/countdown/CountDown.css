@@ -5,6 +5,8 @@
 	justify-content: center;
 	margin: auto;
 	gap: 12px;
+	margin-top: 20px;
+
 }
 .countdown h2 {
 	margin-bottom: 20px;
@@ -41,12 +43,12 @@
 
 @media screen and (min-width: 550px) {
 	.countdown .content {
-		gap: 30px;
+		gap: 10px;
 	}
 	.countdown .value {
-		font-size: 50px;
-		width: 120px;
-		height: 120px;
+		font-size: 90px;
+		height: 160px;
+		width: 160px;
 	}
 	.countdown .box {
 		height: 200px;
