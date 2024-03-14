@@ -13,13 +13,13 @@ const [show, setShow] = useState(false);
   return (
     <div className="register">
       <div className="register-all">
-        <h1>Create An  Account</h1>
+        <h1>Ստեղծել հաշիվ</h1>
         <form onSubmit={userActions.handleSubmit}>
           <div className="name">
-            <label>Name</label>
+            <label>Անուն</label>
             <input
               type="text"
-              placeholder="Enter youre name"
+              placeholder="Անուն*"
               onChange={(e) => userActions.setName(e.target.value)}
               value={userState.username}
               className={userState.errorName?'error':''}
@@ -27,10 +27,10 @@ const [show, setShow] = useState(false);
             />
           </div>
           <div className="email">
-            <label>Email</label>
+            <label>Էլեկտրոնային հասցե</label>
             <input
               type="text"
-              placeholder="Enter your Email"
+              placeholder="Էլ-փոստ․․․"
               onChange={(e) => userActions.setEmail(e.target.value)}
               value={userState.email}
               className={userState.errorEmail?'error':''}
@@ -38,11 +38,10 @@ const [show, setShow] = useState(false);
             />
           </div>
           <div className="phone">
-            <label>Phone Number <small>Format: 094-55-55-55</small></label>
+            <label>Հեռախոսահամար <small>Օրինակ: 094956175</small></label>
             <input
               type="tel"
-              placeholder=" 094-55-55-55"
-              // pattern="[0-9]{3}[0-9]{3}[0-9]{3}"
+              placeholder="Հեռ։"
               onChange={(e) => userActions.setPhone(e.target.value)}
               value={(userState.phone)}
               className={userState.errorPhone?'error':''}
@@ -50,11 +49,11 @@ const [show, setShow] = useState(false);
             />
           </div>
           <div className={"password"}>
-          <label>Password</label>
+          <label>Գաղտնաբառ  </label>
 
             <input
               type={show?'text':'password'}
-              placeholder="Enter your Password"
+              placeholder="Գաղտնաբառ*"
               onChange={(e) => userActions.setPassword(e.target.value)}
               value={userState.password}
               className={userState.errorPassword?'error':''}
@@ -67,10 +66,10 @@ const [show, setShow] = useState(false);
             )}
           </div>
           <div className="password">
-            <label>Comfirm Password</label>
+            <label>Հաստատեք գաղտնաբառը</label>
             <input
               type="password"
-              placeholder="Enter your password again"
+              placeholder="Հաստատել "
               onChange={(e) => userActions.setComfirmPassword(e.target.value)}
               value={userState.comfirmPassword}
               className={userState.errorComfirmPassword?'error':''}
@@ -81,11 +80,11 @@ const [show, setShow] = useState(false);
             
           </div>
 
-          <button type={"submit"}>Sign Up</button>
+          <button type={"submit"}>Գրանցվել</button>
           {/* <a href="">Back</a> */}
         </form>
         <div className="signin">
-          <p>Don’t have an account ? <a href="/login">Sign In</a> </p>
+          <p>ՈՒնեք հաշիվ ? <a href="/login">Մուտք</a> </p>
         </div>
       </div>
     </div>

@@ -20,6 +20,8 @@ const UserContextProvider = ({ children }) => {
 
   // modal
   const [modal, setModal] = useState(false);
+  const [modalHome,setModalHome]  = useState(false)
+
 
   // ulpoad files
   const [upload, setUpload] = useState([]);
@@ -41,9 +43,7 @@ const UserContextProvider = ({ children }) => {
     );
 
   
-    // heraxosi hamar  vor  lini bolor hayakakn koderov miayn
-    // paroly qanaky 8ic pakas chlini nerari tiv,poqrtar,mecatar,u hatuk nshan
-    // mutq anen miayn hayeren tarerov
+    //
 
     if (username === null || username === "") {
       isproccesd = false;
@@ -315,6 +315,7 @@ const UserContextProvider = ({ children }) => {
           upload,
           tastyUpload,
           discovering,
+          modalHome
         },
         userActions: {
           setName,
@@ -333,6 +334,7 @@ const UserContextProvider = ({ children }) => {
           setTastyUpload,
           setCommunityUpload,
           setDiscoveringUpload,
+          setModalHome
         },
       }}
     >

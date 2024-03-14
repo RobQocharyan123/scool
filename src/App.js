@@ -12,6 +12,7 @@ import { Discovering } from "./components/vote/Discovering";
 import { Community } from './components/vote/Community';
 import { Home } from "./components/home/Home";
 import AplicationForm from "./components/aplicationform/AplicationForm";
+import ProgramAbout from "./components/home/ProgramAbout";
 
 
  // json-server --watch db.json --port 8000
@@ -22,7 +23,7 @@ function App() {
       <ToastContainer></ToastContainer>
       <div className="routes">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<ProgramAbout />} />
           <Route path="/aplicationform" element={<AplicationForm />} />
           {/* <Route path="/
           " element={<Lifestyle />} />

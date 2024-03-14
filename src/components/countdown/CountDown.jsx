@@ -34,7 +34,7 @@ export const CountDown = () => {
 
   return (
     <div className="countdown">
-      <h2>You can vote until</h2>
+      <h2>Ծրագիրը կսկսվի</h2>
       <div className="line"></div>
       <div className="content">
 

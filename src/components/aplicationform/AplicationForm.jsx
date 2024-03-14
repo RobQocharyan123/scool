@@ -28,7 +28,7 @@ export default function AplicationForm() {
   const validete = (values) => {
     let errors = true;
     const regExpMail = /^[\w.%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const regExpText = /^([Ա-ՖA-Z])([ա-ֆa-z])+$/;
+    const regExpText = /^([Ա-ՖեևԵեA-Z])([ա-ֆևa-z])+$/;
     const regExpNameUsername =
       /^(?:[\u0531-\u0556\u0561-\u0586]+|[Ա-Ֆ][ա-ֆ'-]+)(?:\s(?:[\u0531-\u0556\u0561-\u0586]+|[Ա-Ֆ][ա-զ'-]+))*$/u;
     const regExpPhone =
@@ -129,8 +129,27 @@ export default function AplicationForm() {
 
   const handleSubmitAl = (e) => {
     e.preventDefault();
-    console.log(infoForm);
-    setErrorMessage(validete(infoForm));
+
+    if (validete(infoForm)) {
+      debugger;
+      fetch("http://127.0.0.1:8000/info/users/", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(infoForm),
+      })
+        .then((res) => {
+          if (res.ok) {
+            toast.success("Success");
+            navigate("/login");
+          } else {
+            toast.warning("write other email");
+            setErrorPersoneMail(true);
+          }
+        })
+        .catch((err) => {
+          toast.warning("Fail: " + err.message);
+        });
+    }
   };
 
   const clearErrors = (e) => {
@@ -169,11 +188,10 @@ export default function AplicationForm() {
       <div className="scedule">
         <CountDown />
       </div>
-      {/* <pre>{JSON.stringify(infoForm, undefined, 2)}</pre> */}
       <div className="time-block"></div>
       <div className="formBlock">
         <form action="" onSubmit={handleSubmitAl}>
-          <h2 className="formTitle">Registration form</h2>
+          <h2 className="formTitle">Գրանցման Դաշտ</h2>
           <div className="formItem">
             <label htmlFor="marz" className="formItemLabel1">
               Մարզ
@@ -205,7 +223,7 @@ export default function AplicationForm() {
             </label>
             <input
               type="text"
-              placeholder="Ձեր պատասխանը"
+              placeholder="Քաղաք/գյուղ"
               name="townOrCity"
               className={`formItemInput1 ${errorTownOrCity ? "error" : ""}`}
               value={infoForm.townOrCity}
@@ -218,7 +236,7 @@ export default function AplicationForm() {
             </label>
             <input
               type="text"
-              placeholder="Ձեր պատասխանը"
+              placeholder="Դպրոց"
               name="schoolName"
               className={`formItemInput1 ${errorSchoolName ? "error" : ""}`}
               value={infoForm.schoolName}
@@ -274,11 +292,13 @@ export default function AplicationForm() {
           </div>
 
           <div className="formBtnBlock">
-            <input type="submit" value="Next" className="btn-form" />
+            <button type="submit" className="btn-form">
+              Ուղարկել
+            </button>
             <input
               type="submit"
               onClick={handleClear}
-              value="Clear Form"
+              value="Մաքրել դաշտերը"
               className="bnt-clear-form"
             />
           </div>

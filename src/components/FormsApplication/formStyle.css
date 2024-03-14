@@ -7,7 +7,11 @@
 }
 
 .formContainer form {
-  width: 100%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .formContainer form input {
@@ -20,9 +24,10 @@
 }
 
 .formBlock {
-  width: 50%;
-  margin: auto;
-  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .formBlock label {
   padding: 0;
@@ -43,6 +48,8 @@
   font-weight: 400;
   line-height: 69px;
   letter-spacing: 0.1px;
+  font-size: 40px;
+  line-height: 24px;  
 }
 
 .formItem {
@@ -71,6 +78,7 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 25px;
+  margin-bottom: 20px;
 }
 
 .formItem input[type="checkbox"]::before {
@@ -241,7 +249,6 @@ input[type="number"] {
 }
 
 .btn-form {
-  padding: 15px 70px !important;
   cursor: pointer;
   border: none;
   transition: all 1s;
@@ -251,6 +258,7 @@ input[type="number"] {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   line-height: 28px;
+  width: 30%;
 }
 
 .bnt-clear-form {
@@ -262,10 +270,20 @@ input[type="number"] {
   cursor: pointer;
   font-size: 18px;
   line-height: 20px;
+  width: 30%;
+  text-align: right;
 }
+
 
 .btn-form:hover {
   background-color: #3d7303;
+  transition: all .5s linear;
+
+}
+
+.bnt-clear-form:hover{
+  color: #3d7303;
+  transition: all .5s linear;
 }
 
 .errorMessge {
@@ -277,6 +295,37 @@ input[type="number"] {
   padding: 5px 0;
 }
 
+@media screen and (max-width:480px) {
+    .formContainer form{
+      width: 85%;
+    }
+
+    .formTitle{
+      font-size: 30px;
+      line-height: 10px;
+    }
+    
+
+    .formItem .formItemLabel1{
+      font-size: 20px;
+    }
+
+    .formBtnBlock{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .btn-form{
+      width: 100%;
+    }
+
+    .bnt-clear-form{
+      width: 100%;
+    }
+}
 
 /* errors */
 .error {
