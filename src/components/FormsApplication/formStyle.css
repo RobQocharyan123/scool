@@ -12,6 +12,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 100px;
 }
 
 .formContainer form input {
@@ -49,7 +50,8 @@
   line-height: 69px;
   letter-spacing: 0.1px;
   font-size: 40px;
-  line-height: 24px;  
+  line-height: 24px; 
+  margin-bottom: 50px; 
 }
 
 .formItem {
@@ -295,9 +297,16 @@ input[type="number"] {
   padding: 5px 0;
 }
 
+@media screen and (max-width:800px) {
+  .formContainer form{
+    margin-top: 40px;
+  }
+}
+
 @media screen and (max-width:480px) {
     .formContainer form{
       width: 85%;
+      margin-top: 0;
     }
 
     .formTitle{

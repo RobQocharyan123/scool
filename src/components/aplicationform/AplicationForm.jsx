@@ -139,15 +139,15 @@ export default function AplicationForm() {
       })
         .then((res) => {
           if (res.ok) {
-            toast.success("Success");
+            toast.success("Հաջողվեց");
             navigate("/login");
           } else {
-            toast.warning("write other email");
+            toast.warning("Էլ-հասցեն սխալ է․․․");
             setErrorPersoneMail(true);
           }
         })
         .catch((err) => {
-          toast.warning("Fail: " + err.message);
+          toast.warning("Չհաջողվեց");
         });
     }
   };

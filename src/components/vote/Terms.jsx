@@ -1,4 +1,4 @@
-import "./Vote.css";
+import "../vote/Vote.css";
 import React, { useState, useContext } from "react";
 import { IoMdClose } from "react-icons/io";
 import { UserContext } from "../../UserContext";

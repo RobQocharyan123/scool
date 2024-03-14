@@ -9,13 +9,13 @@ export const Login = () => {
   return (
     <div className="register">
       <div className="register-all">
-        <h1>Login</h1>
+        <h1>Մուտք</h1>
         <form onSubmit={userActions.handleSubmitLogin}>
           <div className="email">
-            <label>Email</label>
+            <label>Էլեկտրոնային հասցե</label>
             <input
               type="text"
-              placeholder="Enter your Email"
+              placeholder="Էլ-փոստ"
               onChange={(e) => userActions.setEmail(e.target.value)}
               value={userState.email}
               className={userState.errorEmail ? "error" : ""}
@@ -23,11 +23,11 @@ export const Login = () => {
           </div>
 
           <div className={"password"}>
-            <label>Password</label>
+            <label>Գաղտնաբառ</label>
 
             <input
               type={show ? "text" : "password"}
-              placeholder="Enter your Password"
+              placeholder="Գաղտնաբառ*"
               onChange={(e) => userActions.setPassword(e.target.value)}
               value={userState.password}
               className={userState.errorPassword ? "error" : ""}
@@ -41,19 +41,18 @@ export const Login = () => {
 
           <div className="rememberMe">
             <div>
-              <label>Remember me </label>
+              <label>Հիշել </label>
               <input type="checkbox" className="remember" />
             </div>
 
-            <a href="/forgetpass">Forgot Password?</a>
+            <a href="/forgetpass">Մոռացել եք գաղտնաբառը?</a>
           </div>
 
-          <button type={"submit"} className="loginbtn">Login</button>
-          {/* <a href="">Back</a> */}
+          <button type={"submit"} className="loginbtn">Մուտք</button>
         </form>
         <div className="signin">
           <p>
-            Don’t have an account ? <a href="/register">Sign Up</a>{" "}
+            Չունե՞ք հաշիվ<a href="/register">Գրանցվել</a>{" "}
           </p>
         </div>
       </div>

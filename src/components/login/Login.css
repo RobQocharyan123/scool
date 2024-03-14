@@ -51,6 +51,9 @@
   padding: 0 10px;
 }
 
+.signin a{
+  margin-left: 15px;
+}
 @media screen and (max-width:339px) {
     .rememberMe label{
       font-size: 10px;

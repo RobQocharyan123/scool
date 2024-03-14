@@ -11,7 +11,6 @@ export const NewPass = () => {
     <div className="register">
       <div className="register-all">
         <h1>Forget Password?</h1>
-        <p>Please check your email for create a new password</p>
         <form onSubmit={userActions.handleSubmitPasswords}>
           <div className={"password"}>
             <label>Password</label>

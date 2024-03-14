@@ -20,8 +20,7 @@ const UserContextProvider = ({ children }) => {
 
   // modal
   const [modal, setModal] = useState(false);
-  const [modalHome,setModalHome]  = useState(false)
-
+  const [modalHome, setModalHome] = useState(false);
 
   // ulpoad files
   const [upload, setUpload] = useState([]);
@@ -33,16 +32,19 @@ const UserContextProvider = ({ children }) => {
 
   const isValidate = () => {
     let isproccesd = true;
-    const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d.,/$#]+$/.test(password);
+    const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d.,/$#]+$/.test(
+      password
+    );
     const emailRegex = /^[\w.%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
-    const phoneRegex = /^(091|097|096|099|043|077|093|094|098|049|055|095|041)\d{6}$/.test(phone);
-
+    const phoneRegex =
+      /^(091|097|096|099|043|077|093|094|098|049|055|095|041)\d{6}$/.test(
+        phone
+      );
 
     const usernameRegexArmenianLetter = /^[\u0531-\u0556\u0561-\u0587]+$/u.test(
       username
     );
 
-  
     //
 
     if (username === null || username === "") {
@@ -72,7 +74,9 @@ const UserContextProvider = ({ children }) => {
       setErrorComfirmPassword(true);
     } else if (!passRegex) {
       isproccesd = false;
-      toast.warning(" Գաղտնաբառը պետք է լինի Լատինատառ եվ  պարունակի առնվազն մեկ փոքրատառ, մեկ մեծատառ և մեկ թիվ։ Օրինակ` Secret123");
+      toast.warning(
+        " Գաղտնաբառը պետք է լինի Լատինատառ եվ  պարունակի առնվազն մեկ փոքրատառ, մեկ մեծատառ և մեկ թիվ։ Օրինակ` Secret123"
+      );
       setErrorPassword(true);
     } else {
       setErrorPassword(false);
@@ -96,12 +100,14 @@ const UserContextProvider = ({ children }) => {
       setErrorPhone(true);
     } else if (!phoneRegex) {
       isproccesd = false;
-      toast.warning(" Հեռախոսահամարը պետք է լինի oրինակին համապատասխան: 094555657");
+      toast.warning(
+        " Հեռախոսահամարը պետք է լինի oրինակին համապատասխան: 094555657"
+      );
       setErrorPhone(true);
     } else {
       setErrorPhone(false);
     }
-   
+
     return isproccesd;
   };
   const isValidateLogin = () => {
@@ -110,17 +116,16 @@ const UserContextProvider = ({ children }) => {
       email
     );
     let isproccesd = true;
-    let errorMessage = "Please enter the value in ";
-
     if (password === null || password === "") {
       isproccesd = false;
-      errorMessage += " password";
+      toast.warning(" Գաղտնաբառ դաշտը պարտադիր է․․․ ");
       setErrorPassword(true);
       setErrorComfirmPassword(true);
     } else if (!passRegex) {
       isproccesd = false;
-      errorMessage =
-        " Password must contain at least one lowercase letter, one uppercase letter and one number Example abc123 / xyz567";
+      toast.warning(
+        " Գաղտնաբառը պետք է լինի Լատինատառ եվ  պարունակի առնվազն մեկ փոքրատառ, մեկ մեծատառ և մեկ թիվ։ Օրինակ` Secret123"
+      );
       setErrorPassword(true);
     } else {
       setErrorPassword(false);
@@ -128,18 +133,14 @@ const UserContextProvider = ({ children }) => {
 
     if (email === null || email === "") {
       isproccesd = false;
-      errorMessage += " Email";
+      toast.warning(" Էլեկտրոնային հասցեն պարտադիր է․․․ ");
       setErrorEmail(true);
     } else if (!emailRegex) {
       isproccesd = false;
-      errorMessage += " Write correct Email";
+      toast.warning(" Էլեկտրոնային հասցեն սխալ է․․․ ");
       setErrorEmail(true);
     } else {
       setErrorEmail(false);
-    }
-
-    if (!isproccesd) {
-      toast.warning(errorMessage);
     }
 
     return isproccesd;
@@ -150,53 +151,46 @@ const UserContextProvider = ({ children }) => {
       email
     );
     let isproccesd = true;
-    let errorMessage = "Please enter the value in ";
 
     if (email === null || email === "") {
       isproccesd = false;
-      errorMessage += " Email";
+      toast.warning(" Էլեկտրոնային հասցեն պարտադիր է․․․ ");
       setErrorEmail(true);
     } else if (!emailRegex) {
       isproccesd = false;
-      errorMessage += " Write correct Email";
+      toast.warning(" Էլեկտրոնային հասցեն սխալ է․․․ ");
       setErrorEmail(true);
     } else {
       setErrorEmail(false);
     }
 
-    if (!isproccesd) {
-      toast.warning(errorMessage);
-    }
+    
 
     return isproccesd;
   };
 
   const isValidatePasswords = () => {
     let isproccesd = true;
-    let errorMessage = "Please enter the value in ";
     const passRegex = /^(?=.*[A-Za-z0-9])[A-Za-z0-9]{3,10}$/.test(password);
 
     if (password === null || password === "") {
       isproccesd = false;
-      errorMessage += " password";
+      toast.warning(" Գաղտնաբառ դաշտը պարտադիր է․․․ ");
       setErrorPassword(true);
       setErrorComfirmPassword(true);
     } else if (password !== comfirmPassword) {
       isproccesd = false;
-      errorMessage = " Passwords do not match";
+      toast.warning(" Գաղտնաբառերը չեն համընկնում");
       setErrorComfirmPassword(true);
     } else if (!passRegex) {
       isproccesd = false;
-      errorMessage =
-        " Password must contain at least one lowercase letter, one uppercase letter and one number Example abc123 / xyz567";
+      toast.warning(
+        " Գաղտնաբառը պետք է լինի Լատինատառ եվ  պարունակի առնվազն մեկ փոքրատառ, մեկ մեծատառ և մեկ թիվ։ Օրինակ` Secret123"
+      );
       setErrorPassword(true);
     } else {
       setErrorPassword(false);
       setErrorComfirmPassword(false);
-    }
-
-    if (!isproccesd) {
-      toast.warning(errorMessage);
     }
 
     return isproccesd;
@@ -220,40 +214,44 @@ const UserContextProvider = ({ children }) => {
       })
         .then((res) => {
           if (res.ok) {
-            toast.success("Success");
+            toast.success("Հաջողվեց");
             navigate("/login");
           } else {
-            toast.warning("write other email");
+            toast.warning(" Էլեկտրոնային հասցեն սխալ է․․․ ");
           }
         })
         .catch((err) => {
-          toast.warning("Fail: " + err.message);
+          toast.warning("Չհաջողվեց");
         });
     }
   };
 
   const handleSubmitLogin = (e) => {
     e.preventDefault();
-    if (isValidateLogin()) {
-      const fetchData = async () => {
-        try {
-          const response = await fetch("https://api.example.com/data");
-          const result = await response.json();
-          let findEmail = result.find((email) => {
-            return "userEmail";
-          });
 
-          if (findEmail) {
-            toast.success("Success");
-            navigate("/schoolPage");
+    let obj = {
+      email,
+      password
+    }
+    if (isValidateLogin()) {
+      fetch("http://127.0.0.1:8000/info/users/", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(obj),
+      })
+        .then((res) => {
+          if (res.ok) {
+            toast.success("Հաջողվեց");
+            navigate("/login");
+          } else {
+            toast.warning(" Տվյալները սխալ են․․․ ");
           }
-        } catch (error) {
-          toast.success("Write right Email and Password");
-        }
+        })
+        .catch((err) => {
+          toast.warning("Չհաջողվեց");
+        });
       };
 
-      fetchData();
-    }
   };
 
   const handleSubmitForgetPass = (e) => {
@@ -269,19 +267,21 @@ const UserContextProvider = ({ children }) => {
       })
         .then((res) => {
           if (res.ok) {
-            toast.success("Success");
+            toast.success("Հաջողվեց");
             navigate("/login");
           } else {
-            toast.warning("write other email");
+            toast.warning(" Էլեկտրոնային հասցեն սխալ է․․․ ");
+
           }
         })
         .catch((err) => {
-          toast.warning("Fail: " + err.message);
+          toast.warning("Չհաջողվեց");
         });
     }
   };
 
   const handleSubmitPasswords = (e) => {
+    // pet q e tarmacnel ogtatiroj password-y
     e.preventDefault();
     if (isValidatePasswords()) {
       toast.success("Success");
@@ -294,6 +294,10 @@ const UserContextProvider = ({ children }) => {
 
   const toggleModal = () => {
     setModal(!modal);
+  };
+
+  const togleModalHome = () => {
+    setModalHome(!modal);
   };
 
   return (
@@ -315,7 +319,7 @@ const UserContextProvider = ({ children }) => {
           upload,
           tastyUpload,
           discovering,
-          modalHome
+          modalHome,
         },
         userActions: {
           setName,
@@ -334,7 +338,7 @@ const UserContextProvider = ({ children }) => {
           setTastyUpload,
           setCommunityUpload,
           setDiscoveringUpload,
-          setModalHome
+          togleModalHome,
         },
       }}
     >

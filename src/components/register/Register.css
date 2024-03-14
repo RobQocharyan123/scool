@@ -114,11 +114,15 @@ a {
 .password svg {
   cursor: pointer;
   position: absolute;
-  right: 10px;
-  top: 45px;
+  right: 14px;
+  top: 40px;
   z-index: 5;
 }
 
+
+.signin{
+  margin-top: 20px;
+}
 /* media register */
 
 @media screen and (max-width: 768px) {
